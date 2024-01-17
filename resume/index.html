@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="3">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        .exp-title {
+            @apply font-semibold text-lg;
+        }
+        .exp-company {
+            @apply text-base text-slate-600;
+        }
+        .exp-duration {
+            @apply  text-xs font-medium text-slate-600;
+        }
+        .exp-companydesc {
+            @apply text-xs font-normal pt-4 ml-4;
+        }
+        .exp-desc {
+            @apply pt-4 ml-8 text-sm text-slate-800 font-medium;
+        }
+        .proj-desc {
+            @apply ml-8 text-sm text-slate-800 font-medium;
+        }
+        .link {
+            @apply text-blue-600 font-bold hover:underline;
+        }
+        .sec-header-cont {
+            @apply mx-[-60px];
+        }
+        .sec-header-child {
+            @apply mx-[60px];
+        }
+      </style>
+</head>
+
+<body class="font-sans antialiased">
+
+    <div class="md:flex place-content-center text-sm">
+
+
+        <!-- SIDEBAR -->
+        <div class="w-80 bg-[#155e75] text-white p-8 sticky top-0 h-screen">
+            <div class="p-2">
+                <img class="rounded-full center border-8 border-white-600" src="res/photo1.jpg" alt="Profile Picture">
+            </div>
+            <div class="space-y-2 mt-8">
+                <div class="text-xl">Contact</div>
+                <p class="h-0.5 w-20 bg-white my-2 mb-6" />
+
+                <div class="md:flex pt-2">
+                    <image class="mr-1 fill-black size-5" src="res/pin-fill-rounded-circle-629-svgrepo-com.svg" />
+                    <div>Bengaluru, Karnataka, India</div>
+                </div>
+
+                <div class="md:flex">
+                    <image class="mr-1 fill-black size-5" src="res/email-svgrepo-com.svg" />
+                    <div>chan.only.123@gmail.com</div>
+                </div>
+
+                <div class="md:flex">
+                    <image class="mr-1 fill-black size-6" src="res/phone-rounded-svgrepo-com.svg" />
+                    <div>(+91) 7059533294</div>
+                </div>
+            </div>
+
+            <div>
+
+                <div class="text-xl mt-8">Primary Skills</div>
+                <p class="h-0.5 w-32 bg-white my-2 mb-6" />
+
+                <ul class="ml-4 font-light">
+                    <li class="font-semibold">Swift SwiftUI UIKit</li>
+                    <li class="">Andriod Java Kotlin</li>
+                    <li class="">HTML CSS JavaScript</li>
+                    <li class="">Reactjs TailwindCSS</li>
+                    <li class="">Node.js npm</li>
+                    <li class="">MongoDb</li>
+                    <li class="">Git</li>
+                    <!-- Add more skills as needed -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- END SIDEBAR -->
+
+        <div style="width: 800px;">
+
+            <!-- HEADER -->
+            <div class="flex flex-col items-center py-20 bg-gray-100">
+                <h1 class="text-3xl text-slate-700">CHANDAN KARMAKAR</h1>
+                <p class="h-0.5 w-28 bg-gray-500 my-2 mb-6" />
+                <p style="font-size:1.5em;">iOS app developer</p>
+            </div>
+
+            <!-- END HEADER -->
+
+            <div class="sec-header-child">
+
+                <div class="profile_summary">
+                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                        <div class="text-2xl text-slate-600 sec-header-child">
+                            Summary
+                            <p class="h-0.5 w-[120px] bg-gray-500 my-2 mb-6" />
+                        </div>
+                    </div>
+
+                    <p class="text-base text indent-4">Highly motivated professional with 8 years of software
+                        engineering and mobile app development experience. Skilled in iOS (Swift, Objective C, MVC,
+                        MVVM, SwiftUI) and Android (Java, Kotlin). Published two Android games and committed to
+                        open-source contributions. Proficient in web technologies</p>
+                </div>
+
+
+                <!-- WROK EXPERIENCES -->
+                <div class="space-y-8">
+
+                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                        <div class="text-2xl text-slate-600 mt-8 sec-header-child">Work Experience
+                            <p class="h-0.5 w-[200px] bg-gray-500 my-2 mb-6" />
+                        </div>
+                    </div>
+
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Senior iOS developer</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">October 2023 - December 2023</div>
+                        </div>
+                        <div class="exp-company">Bolt.Earth, Bangalore</div>
+                        <div class="exp-companydesc">Powering the EV Ecosystem, <a class="link"
+                                href="https://bolt.earth">bolt.earth</a></div>
+                        <div class="exp-desc">
+                            <ul class="list-disc">
+                                <li>Develop iOS static/dynamic libraries for seamless integration with third-party
+                                    clients, focusing on
+                                    BLE
+                                    and WIFI-enabled chargers.</li>
+                                <li>Implement Swift Package Manager and Cocoapods support for easy adoption and
+                                    flexibility.</li>
+                                <li>Write thorough test cases and documentation to ensure robust functionality and
+                                    ease
+                                    of use.</li>
+                                <li>Conduct profiling to optimize performance and memory efficiency.</li>
+                                <li>Create a feature-rich sample app for clear illustration and demonstration
+                                    purposes.</li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Lead iOS/Android developer</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">April 2020 - July 2023</div>
+                        </div>
+                        <div class="exp-company">Eezylabs, Bangalore</div>
+
+                        <div class="exp-companydesc">A startup <a class="link" href="https://eezy.ai">eezy.ai</a>
+                            founded by
+                            <a class="link" href="https://www.linkedin.com/in/nick-carbonari-273805b6/">Nick
+                                Carbonari</a>, Founder
+                            and CEO of
+                            <a class="link" href="https://www.autoscout24.com">AutoScout24</a>, the largest pan-European
+                            online car market.
+                        </div>
+                        <div class="exp-desc">
+                            <ul class="list-disc">
+                                <li>Enhanced <a class="link"
+                                        href="https://apps.apple.com/us/app/eezy-your-mood-driven-planner/id1221854425?_branch_match_id=1025107716883069930&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT02tqszJTEvVSywo0MvJzMvWr8pycU1M8TEM8QMA3o4ZUCQAAAA%3D">eezylife
+                                        iOS app</a>, leading a small team in feature development.</li>
+                                <li>Managed tasks, code reviews, and motivated team members.</li>
+                                <li>Scaled app for millions of downloads.</li>
+                                <li>Specialized in chat UI, push notifications, Firebase integration, Combine pub/sub,
+                                    and MVVM.</li>
+                                <li>Implemented Private/channel chat with Firebase.</li>
+                                <li>Restructured code to MVVM and SwiftUI, utilized CI/CD with fastlane.</li>
+                                <li>Prioritized code quality with Lint/SwiftFormat.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Lead iOS developer</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">May 2018 - March 2020</div>
+                        </div>
+                        <div class="exp-company">Spanningtree, Bangalore</div>
+                        <div class="exp-companydesc">
+                            A startup founded by Sumit Jain, Co-Founder and former CEO of <a class="link"
+                                href="https://www.commonfloor.com">CommonFloor</a>, India's premium real
+                            estate portal.
+                        </div>
+                        <div class="exp-desc">
+                            <ul class="list-disc">
+                                <li>
+                                    Launched <a class="link"
+                                        href="https://drive.google.com/file/d/1xL_tNGtze4r6n_1e3P7pU5wuxVr0sHxS/view?usp=sharing">BuddyTalk</a>
+                                    and <a class="link"
+                                        href="https://apps.apple.com/us/app/opentalk-fm/id1484810570">Opentalk</a> iOS
+                                    apps from scratch in Swift, establishing
+                                    architecture patterns.
+                                </li>
+                                <li>
+                                    Led iOS team, focused on optimization, and conducted regular profiling.
+                                </li>
+                                <li>
+                                    Scaled apps for millions of downloads, with a focus on Voice and Video calling using
+                                    WebRTC and Sockets.
+                                </li>
+                                <li>
+                                    Implemented Plug and Play mechanism for real-time SDK switching, Speech Analyzer.
+                                </li>
+                                <li>
+                                    Worked on audio recording, push notifications, REST API integration, and unit/UI
+                                    testing.
+                                </li>
+                                <li>
+                                    Utilized MVVM, Apple/Google/phone login/registration, and Firebase for
+                                    login/database/storage.
+                                </li>
+                                <li>
+                                    Prioritized code quality with Lint/SwiftFormat.
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Lead iOS developer</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">August 2017 - April 2018</div>
+                        </div>
+                        <div class="exp-company">Kreative Machinez, Kolkata, West Bengal</div>
+
+                        <div class="exp-desc">
+                            <ul class="list-disc">
+                                <li>
+                                    Led iOS team, designed quality software architecture, and contributed to app
+                                    development.
+                                </li>
+                                <li>
+                                    Implemented push notifications, animated UI development, REST API integration, and
+                                    Unit testing
+                                    using the MVC architecture with Firebase database integration.
+                                </li>
+                                <li>
+                                    Optimized and released Moove (iOS) and PMM Plus (iOS).
+                                </li>
+                                <li>
+                                    Launched <span class="font-bold text-base">Stupid App - Trivia Game</span> with
+                                    anonymous
+                                    chat, challenging general
+                                    knowledge for real money.
+                                    Featured Socket connection, Offline chat using Realm DB.
+                                    Achieved 2 lakh downloads in 2 weeks; Discontinued after 6 months, Acquired by
+                                    Vokal.
+                                    Scaled the app for millions of downloads and uses.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Android and iOS developer</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">April 2015 - August 2017</div>
+                        </div>
+                        <div class="exp-company">E Info Solutions pvt. ltd. Kolkata, West Bengal</div>
+
+                        <div class="exp-desc">
+                            <ul class="list-disc">
+                                <li>
+                                    Led as Mobile Tech Lead, overseeing app development, software architecture, client
+                                    communication,
+                                    site visits, requirements gathering, and software support. Mentored fellow
+                                    developers.
+                                </li>
+                                <li>
+                                    Designed and developed the <span class="font-bold text-base">Trishan Steel Plan
+                                        app</span>, an Android app in Java featuring
+                                    a QR scanner
+                                    and product tag printing. Implemented backend REST services with C# .NET.
+                                </li>
+                                <li>
+                                    Worked on push notifications, UI design, REST API integration, Unit testing, local
+                                    storage, SQLite,
+                                    animations, QR code, and camera usage. Maintained high-quality software architecture
+                                    using MVC.
+                                </li>
+                                <li>
+                                    Successfully delivered over 10 client apps, including a restaurant menu app and
+                                    Atletico de Kolkata
+                                    football app.
+                                </li>
+                                <li>
+                                    Orchestrated more than 10 releases for <span
+                                        class="font-bold text-base">eWards</span>
+                                    (<a class="link"
+                                        href="https://play.google.com/store/apps/details?id=com.ewards">Android</a> & <a
+                                        class="link"
+                                        href="https://itunes.apple.com/in/app/ewards/id1084631734">iOS</a>), a
+                                    loyalty
+                                    program
+                                    app.
+                                </li>
+                                <li>
+                                    Created an Augmented Reality app using the OpenCV public library for Android.
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!-- END WROK EXPERIENCES -->
+
+
+                <!-- PROJECTS -->
+                <div class="space-y-8">
+
+                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                        <div class="text-2xl text-slate-600 mt-8 sec-header-child">Projects
+                            <p class="h-0.5 w-[110px] bg-gray-500 my-2 mb-6" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="exp-title">Bolt earth iOS sdk</div>
+                        <div class="exp-company">The Bolt Earth iOS SDK facilitates easy integration of fast and
+                            reliable charging features, including Bluetooth capabilities, into iOS applications. With a
+                            user-friendly interface and quick connection, developers can seamlessly enhance their apps
+                            for an efficient and streamlined charging experience, all supported by comprehensive
+                            documentation.</div>
+                        <div class="exp-companydesc">Team size: 2
+                            <br /> <a class="link"
+                                href="https://bolt-earth.bitbucket.io/sdk/ios/doc/documentation/boltblesdk/">Documentation
+                                link</a>
+                            <br /> <a class="link"
+                                href="https://bitbucket.org/poojaios/boltblesdkdistribution/src/BoltEarthBLE/">Bolt SDK
+                                link</a>
+                        </div>
+                        <div class="exp-companydesc">Responsibilities</div>
+                        <div class="proj-desc">
+                            <ul class="list-disc">
+                                <li>Leading the development of Bolt Eearth SDK for iOS.</li>
+                                <li>Creating clear documentation, test cases, and performing profiling.</li>
+                                <li>Distributing the SDK effortlessly via Swift Package Manager and Cocoapods.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-companydesc">Tech: Swift, SwiftUI, Xcode, MVVM, SPM, Cocoapods, Core Blutooth,
+                            Encryption, Git, Core data, Dependency Injection, Clean arch.</div>
+                    </div>
+
+
+
+                    <div>
+                        <div class="exp-title">Eezy: Your mood driven partner</div>
+                        <div class="exp-company">eezylife: A user-friendly mobile app offering seamless navigation,
+                            interactive chat, and efficient task management. Built for scalability and security, with a
+                            streamlined user interface and engaging features.</div>
+                        <div class="exp-companydesc">
+                            Team size: 7
+                            <br /> <a class="link" href="https://eezylife.app.link/zjDEadL1TN">App store Link</a>
+                            <br /> <a class="link" href="https://eezylife.app.link/zjDEadL1TN">Play store Link</a>
+                        </div>
+                        <div class="exp-companydesc">Responsibilities</div>
+                        <div class="proj-desc">
+                            <ul class="list-disc">
+                                <li>Leading the development of iOS (from scratch) and Android app.</li>
+                                <li>Designing, developing, testing, and maintaining, ensuring functionality,
+                                    performance, and usability across various devices.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-companydesc">Tech: Clean arch, Dependency Injection, Swift, Kotlin, SwiftUI,
+                            UIKit, Xcode, Android Studio, MVVM,
+                            Cocoapods,
+                            Git,
+                            Encryption, Realm.</div>
+                    </div>
+
+
+
+
+                    <div>
+                        <div class="exp-title">Whatstool business</div>
+                        <div class="exp-company">Provides whatsapp based business solutions. Web chat, analytics, agent
+                            management, labels management, ticket management, automation etc.
+                        </div>
+                        <div class="exp-companydesc">
+                            Team size: 5
+                        </div>
+                        <div class="exp-companydesc">Responsibilities</div>
+                        <div class="proj-desc">
+                            <ul class="list-disc">
+                                <li>Leading and maintaining of backend microservices</li>
+                                <li>Chat automation editor and processing throug microservices</li>
+                                <li>Designing, developing, testing, and maintaining, ensuring functionality,
+                                    performance.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-companydesc">
+                            Tech: MongoDB, Nodejs, REST, Javascript, Typescript, ReactJs, HTML, CSS,
+                            TailwindCSS, ReactFlow, RabbitMQ.
+                        </div>
+                    </div>
+
+
+
+                    <div>
+                        <div class="exp-title">Buddytalk</div>
+                        <div class="exp-company">BuddyTalk: Connect globally, talk about anything, learn languages, and
+                            share audio talents seamlessly. Join a diverse community for meaningful conversations,
+                            cultural exchange, and showcase your unique skills. Elevate connections with interactive
+                            language tools. Where the world meets to talk, learn, and share talents.</div>
+                        <div class="exp-companydesc">
+                            Team size: 2
+                        </div>
+                        <div class="exp-companydesc">Responsibilities</div>
+                        <div class="proj-desc">
+                            <ul class="list-disc">
+                                <li>Leading the development of iOS app from scratch.</li>
+                                <li>Designing, developing, testing, and maintaining, ensuring functionality,
+                                    performance, and usability across various devices.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-companydesc">Tech: Swift,
+                            UIKit, Xcode, MVC, Cocoapods,
+                            Git, Core data.</div>
+                    </div>
+
+
+
+                    <div>
+                        <div class="exp-title">Opentalk</div>
+                        <div class="exp-company">OpenTalk: Redefining podcasting, our app allows two individuals to
+                            create and record podcasts remotely. Enjoy live broadcasts and share recorded episodes
+                            seamlessly. Engage with listeners, explore live interaction features, and collaborate on
+                            creative content.</div>
+                        <div class="exp-companydesc">
+                            Team size: 1
+                        </div>
+                        <div class="exp-companydesc">Responsibilities</div>
+                        <div class="proj-desc">
+                            <ul class="list-disc">
+                                <li>Leading the development of iOS app from scratch single handedly.</li>
+                                <li>Designing, developing, testing, and maintaining, ensuring functionality,
+                                    performance, and usability across various devices.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-companydesc">Tech: Swift,
+                            UIKit, Xcode, MVC, Cocoapods,
+                            Git, Core data.</div>
+                    </div>
+
+
+
+                    <div>
+                        <div class="exp-title">Stupid App - Trivia Game</div>
+                        <div class="exp-company">Stupid App - Trivia Game: Engage in live quizzes, compete globally, and
+                            win cash prizes.</div>
+                        <div class="exp-companydesc">
+                            Team size: 1
+                        </div>
+                        <div class="exp-companydesc">Responsibilities</div>
+                        <div class="proj-desc">
+                            <ul class="list-disc">
+                                <li>Leading the development of iOS app from scratch single handedly.</li>
+                                <li>Designing, developing, testing, and maintaining, ensuring functionality,
+                                    performance, and usability across various devices.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-companydesc">Tech: Swift,
+                            UIKit, Xcode, MVC, Cocoapods,
+                            Git, Core data.</div>
+                    </div>
+
+
+
+
+                    <div>
+                        <div class="exp-title">Moove iOS app</div>
+                        <div class="exp-company">Compare and book the best ride for you by viewing and comparing Ola,
+                            Uber, and Lyft fares in one place. Simple, convenient, and tailored to your preferences.
+                        </div>
+                        <div class="exp-companydesc">
+                            Team size: 1
+                        </div>
+                        <div class="exp-companydesc">Responsibilities</div>
+                        <div class="proj-desc">
+                            <ul class="list-disc">
+                                <li>Maintaing the iOS app single handedly.</li>
+                                <li>Developing, testing, and maintaining, ensuring functionality,
+                                    performance, and usability across various devices.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-companydesc">Tech: Swift,
+                            UIKit, Xcode, MVC, Cocoapods,
+                            Git, Core data.</div>
+                    </div>
+
+
+                    <div>
+                        <div class="exp-title">PMM Plus iOS app</div>
+                        <div class="exp-company">PMM Plus: Your go-to news app for curated and up-to-date information.
+                            Stay informed effortlessly.
+                        </div>
+                        <div class="exp-companydesc">
+                            Team size: 1
+                        </div>
+                        <div class="exp-companydesc">Responsibilities</div>
+                        <div class="proj-desc">
+                            <ul class="list-disc">
+                                <li>Leading the development of iOS app from scratch single handedly.</li>
+                                <li>Developing, testing, and maintaining, ensuring functionality,
+                                    performance, and usability across various devices.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-companydesc">Tech: Swift,
+                            UIKit, Xcode, MVC, Cocoapods,
+                            Git, Core data.</div>
+                    </div>
+
+
+
+                    <div>
+                        <div class="exp-title">Trishan android app</div>
+                        <div class="exp-company">Scan, record, and manage steel factory sheet processing and items,
+                            including
+                            calculations for seamless efficiency.</div>
+                        <div class="exp-companydesc">
+                            Team size: 1
+                        </div>
+                        <div class="exp-companydesc">Responsibilities</div>
+                        <div class="proj-desc">
+                            <ul class="list-disc">
+                                <li>Leading the development of iOS app from scratch single handedly.</li>
+                                <li>Designing, developing, testing, and maintaining, ensuring functionality,
+                                    performance, and usability across various devices.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-companydesc">Tech: Java, Android studio, QR scanner, REST, tablet.</div>
+                    </div>
+
+
+
+                    <div>
+                        <div class="exp-title">Restaurant menu app for iOS and Android</div>
+                        <div class="exp-company">Genral menu app for restaurants.</div>
+                        <div class="exp-companydesc">
+                            Team size: 1
+                        </div>
+                        <div class="exp-companydesc">Responsibilities</div>
+                        <div class="proj-desc">
+                            <ul class="list-disc">
+                                <li>Leading the development of iOS app from scratch single handedly.</li>
+                                <li>Designing, developing, testing, and maintaining, ensuring functionality,
+                                    performance, and usability across various devices.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-companydesc">Tech: Java, Android studio, QR scanner, REST, tablet, Swift, Xcode,
+                            REST.
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="exp-title">Atletico de kolkata - football app for iOS and Android</div>
+                        <div class="exp-company">Offers live game updates, team information, and hassle-free ticket
+                            booking for an enhanced fan experience.</div>
+                        <div class="exp-companydesc">
+                            Team size: 2
+                        </div>
+                        <div class="exp-companydesc">Responsibilities</div>
+                        <div class="proj-desc">
+                            <ul class="list-disc">
+                                <li>Leading the development of iOS app from scratch.</li>
+                                <li>Designing, developing, testing, and maintaining, ensuring functionality,
+                                    performance, and usability across various devices.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-companydesc">Tech: Java, Android studio, REST, tablet, Swift, Xcode,
+                            REST.
+                        </div>
+                    </div>
+
+
+
+                    <div>
+                        <div class="exp-title">eWards - loyalty program app for iOS and Android</div>
+                        <div class="exp-company">Simplifying loyalty programs with an app that allows users to earn,
+                            track, and redeem rewards seamlessly.</div>
+                        <div class="exp-companydesc">
+                            Team size: 2
+                        </div>
+                        <div class="exp-companydesc">Responsibilities</div>
+                        <div class="proj-desc">
+                            <ul class="list-disc">
+                                <li>Leading the feature development and maintaining of iOS and android app.</li>
+                                <li>Designing, developing, testing, and maintaining, ensuring functionality,
+                                    performance, and usability across various devices.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-companydesc">Tech: Java, Android studio, REST, tablet, Swift, Xcode,
+                            REST.
+                        </div>
+                    </div>
+
+                </div>
+                <!-- END PROJECTS -->
+
+                <div class="skills">
+                    <div class="section_title_main" style="color: #fff;">Skills</div>
+                    <ul class="skills-list">
+                        <li class="skill_item">Web Development</li>
+                        <li class="skill_item">Responsive Design</li>
+                        <li class="skill_item">UI/UX Design</li>
+                        <li class="skill_item">Agile Development</li>
+                        <li class="skill_item">Problem Solving</li>
+                    </ul>
+                </div>
+
+                <div class="education">
+                    <div class="section_title_main">Education</div>
+                    <div class="education-item">
+                        <div class="education-title">Bachelor of Science in Computer Science</div>
+                        <div class="education-date">Graduated: May 2018</div>
+                        <p>University of Example, City, State</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
