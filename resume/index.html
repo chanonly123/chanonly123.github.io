@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="3">
+    <!-- <meta http-equiv="refresh" content="3"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
@@ -25,6 +25,9 @@
         .proj-desc {
             @apply ml-8 text-sm text-slate-800 font-medium;
         }
+        .proj-links {
+            @apply text-xs font-normal ml-4;
+        }
         .link {
             @apply text-blue-600 font-bold hover:underline;
         }
@@ -33,6 +36,12 @@
         }
         .sec-header-child {
             @apply mx-[60px];
+        }
+        .hobbie-item {
+            @apply rounded-lg bg-slate-200 px-2 py-1 font-medium;
+        }
+        .tool-item {
+            @apply rounded-lg bg-teal-600 px-[5px] py-[1.5px] font-bold text-xs text-white;
         }
       </style>
 </head>
@@ -44,7 +53,7 @@
 
         <!-- SIDEBAR -->
         <div class="w-80 bg-[#155e75] text-white p-8 sticky top-0 h-screen">
-            <div class="p-2">
+            <div class="px-12">
                 <img class="rounded-full center border-8 border-white-600" src="res/photo1.jpg" alt="Profile Picture">
             </div>
             <div class="space-y-2 mt-8">
@@ -67,38 +76,66 @@
                 </div>
             </div>
 
-            <div>
 
+
+            <div>
                 <div class="text-xl mt-8">Primary Skills</div>
                 <p class="h-0.5 w-32 bg-white my-2 mb-6" />
 
-                <ul class="ml-4 font-light">
-                    <li class="font-semibold">Swift SwiftUI UIKit</li>
-                    <li class="">Andriod Java Kotlin</li>
-                    <li class="">HTML CSS JavaScript</li>
-                    <li class="">Reactjs TailwindCSS</li>
-                    <li class="">Node.js npm</li>
-                    <li class="">MongoDb</li>
-                    <li class="">Git</li>
-                    <!-- Add more skills as needed -->
-                </ul>
+                <div class="space-y-2 text-xs font-bold">
+                    <div class="bg-gray-200 w-40 rounded-full">
+                        <div class="bg-emerald-500 px-2 py-[1px] rounded-full w-[95%]">iOS</div>
+                    </div>
+                    <div class="bg-gray-200 w-40 rounded-full">
+                        <div class="bg-green-500 px-2 py-[1px] rounded-full w-[75%]">Android</div>
+                    </div>
+                    <div class="bg-gray-200 w-40 rounded-full">
+                        <div class="bg-green-500 px-2 py-[1px] rounded-full w-[70%]">Reactjs</div>
+                    </div>
+                    <div class="bg-gray-200 w-40 rounded-full">
+                        <div class="bg-green-500 px-2 py-[1px] rounded-full w-[70%]">Nodejs</div>
+                    </div>
+                    <div class="bg-gray-200 w-40 rounded-full">
+                        <div class="bg-lime-500 px-2 py-[1px] rounded-full w-[65%]">MongoDB</div>
+                    </div>
+                </div>
             </div>
+
+            <div>
+                <div class="text-xl mt-8">Tools</div>
+                <p class="h-0.5 w-[60px] bg-white my-2 mb-6" />
+
+                <div class="flex flex-wrap gap-2">
+                    <div class="tool-item">Xcode</div>
+                    <div class="tool-item">SwiftUI</div>
+                    <div class="tool-item">UIKit</div>
+                    <div class="tool-item">Unit Tests</div>
+                    <div class="tool-item">Android Studio</div>
+                    <div class="tool-item">VSCode</div>
+                    <div class="tool-item">GCloud</div>
+                    <div class="tool-item">AWS</div>
+                    <div class="tool-item">Firebase</div>
+                </div>
+
+            </div>
+
+
         </div>
 
         <!-- END SIDEBAR -->
 
-        <div style="width: 800px;">
+        <div class="w-[800px] mb-16">
 
             <!-- HEADER -->
             <div class="flex flex-col items-center py-20 bg-gray-100">
                 <h1 class="text-3xl text-slate-700">CHANDAN KARMAKAR</h1>
-                <p class="h-0.5 w-28 bg-gray-500 my-2 mb-6" />
-                <p style="font-size:1.5em;">iOS app developer</p>
+                <p class="h-0.5 w-28 bg-gray-500 my-4 mb-6" />
+                <p class="text-2xl">iOS app developer</p>
             </div>
 
             <!-- END HEADER -->
 
-            <div class="sec-header-child">
+            <div class="sec-header-child mt-16">
 
                 <div class="profile_summary">
                     <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
@@ -108,7 +145,8 @@
                         </div>
                     </div>
 
-                    <p class="text-base text indent-4">Highly motivated professional with 8 years of software
+                    <p class="text-base text indent-4 text-justify">Highly motivated professional with 9 years of
+                        software
                         engineering and mobile app development experience. Skilled in iOS (Swift, Objective C, MVC,
                         MVVM, SwiftUI) and Android (Java, Kotlin). Published two Android games and committed to
                         open-source contributions. Proficient in web technologies</p>
@@ -330,6 +368,25 @@
                     </div>
 
 
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Computer science teacher</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">April 2012 - April 2015</div>
+                        </div>
+                        <div class="exp-company">Computer learning center, Kolkata, West Bengal</div>
+
+                        <div class="exp-desc">
+                            <ul class="list-disc">
+                                <li>
+                                    Teaching basic programming in <span class="font-bold">Java, C, C++, and data
+                                        structures</span> to students from
+                                    class V to class
+                                    XII.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
                 </div>
                 <!-- END WROK EXPERIENCES -->
@@ -345,20 +402,17 @@
                     </div>
 
                     <div>
-                        <div class="exp-title">Bolt earth iOS sdk</div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Bolt earth iOS sdk</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">Team size: 2</div>
+                        </div>
+
                         <div class="exp-company">The Bolt Earth iOS SDK facilitates easy integration of fast and
                             reliable charging features, including Bluetooth capabilities, into iOS applications. With a
                             user-friendly interface and quick connection, developers can seamlessly enhance their apps
                             for an efficient and streamlined charging experience, all supported by comprehensive
                             documentation.</div>
-                        <div class="exp-companydesc">Team size: 2
-                            <br /> <a class="link"
-                                href="https://bolt-earth.bitbucket.io/sdk/ios/doc/documentation/boltblesdk/">Documentation
-                                link</a>
-                            <br /> <a class="link"
-                                href="https://bitbucket.org/poojaios/boltblesdkdistribution/src/BoltEarthBLE/">Bolt SDK
-                                link</a>
-                        </div>
                         <div class="exp-companydesc">Responsibilities</div>
                         <div class="proj-desc">
                             <ul class="list-disc">
@@ -369,17 +423,29 @@
                         </div>
                         <div class="exp-companydesc">Tech: Swift, SwiftUI, Xcode, MVVM, SPM, Cocoapods, Core Blutooth,
                             Encryption, Git, Core data, Dependency Injection, Clean arch.</div>
+
+                        <div class="proj-links">
+                            <br /> <a class="link"
+                                href="https://bolt-earth.bitbucket.io/sdk/ios/doc/documentation/boltblesdk/">Documentation
+                                link</a>
+                            <br /> <a class="link"
+                                href="https://bitbucket.org/poojaios/boltblesdkdistribution/src/BoltEarthBLE/">Bolt SDK
+                                link</a>
+                        </div>
                     </div>
 
 
 
                     <div>
-                        <div class="exp-title">Eezy: Your mood driven partner</div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Eezy: Your mood driven partner</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">Team size: 7</div>
+                        </div>
                         <div class="exp-company">eezylife: A user-friendly mobile app offering seamless navigation,
                             interactive chat, and efficient task management. Built for scalability and security, with a
                             streamlined user interface and engaging features.</div>
                         <div class="exp-companydesc">
-                            Team size: 7
                             <br /> <a class="link" href="https://eezylife.app.link/zjDEadL1TN">App store Link</a>
                             <br /> <a class="link" href="https://eezylife.app.link/zjDEadL1TN">Play store Link</a>
                         </div>
@@ -402,12 +468,15 @@
 
 
                     <div>
-                        <div class="exp-title">Whatstool business</div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Whatstool business</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">Team size: 5</div>
+                        </div>
                         <div class="exp-company">Provides whatsapp based business solutions. Web chat, analytics, agent
                             management, labels management, ticket management, automation etc.
                         </div>
                         <div class="exp-companydesc">
-                            Team size: 5
                         </div>
                         <div class="exp-companydesc">Responsibilities</div>
                         <div class="proj-desc">
@@ -427,13 +496,16 @@
 
 
                     <div>
-                        <div class="exp-title">Buddytalk</div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Buddytalk</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">Team size: 2</div>
+                        </div>
                         <div class="exp-company">BuddyTalk: Connect globally, talk about anything, learn languages, and
                             share audio talents seamlessly. Join a diverse community for meaningful conversations,
                             cultural exchange, and showcase your unique skills. Elevate connections with interactive
                             language tools. Where the world meets to talk, learn, and share talents.</div>
                         <div class="exp-companydesc">
-                            Team size: 2
                         </div>
                         <div class="exp-companydesc">Responsibilities</div>
                         <div class="proj-desc">
@@ -445,19 +517,22 @@
                         </div>
                         <div class="exp-companydesc">Tech: Swift,
                             UIKit, Xcode, MVC, Cocoapods,
-                            Git, Core data.</div>
+                            Git, Core data, Webrtc.</div>
                     </div>
 
 
 
                     <div>
-                        <div class="exp-title">Opentalk</div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Opentalk</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">Team size: 1</div>
+                        </div>
                         <div class="exp-company">OpenTalk: Redefining podcasting, our app allows two individuals to
                             create and record podcasts remotely. Enjoy live broadcasts and share recorded episodes
                             seamlessly. Engage with listeners, explore live interaction features, and collaborate on
                             creative content.</div>
                         <div class="exp-companydesc">
-                            Team size: 1
                         </div>
                         <div class="exp-companydesc">Responsibilities</div>
                         <div class="proj-desc">
@@ -469,17 +544,20 @@
                         </div>
                         <div class="exp-companydesc">Tech: Swift,
                             UIKit, Xcode, MVC, Cocoapods,
-                            Git, Core data.</div>
+                            Git, Core data, Webrtc.</div>
                     </div>
 
 
 
                     <div>
-                        <div class="exp-title">Stupid App - Trivia Game</div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Stupid App - Trivia Game</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">Team size: 1</div>
+                        </div>
                         <div class="exp-company">Stupid App - Trivia Game: Engage in live quizzes, compete globally, and
                             win cash prizes.</div>
                         <div class="exp-companydesc">
-                            Team size: 1
                         </div>
                         <div class="exp-companydesc">Responsibilities</div>
                         <div class="proj-desc">
@@ -498,12 +576,15 @@
 
 
                     <div>
-                        <div class="exp-title">Moove iOS app</div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Moove iOS app</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">Team size: 1</div>
+                        </div>
                         <div class="exp-company">Compare and book the best ride for you by viewing and comparing Ola,
                             Uber, and Lyft fares in one place. Simple, convenient, and tailored to your preferences.
                         </div>
                         <div class="exp-companydesc">
-                            Team size: 1
                         </div>
                         <div class="exp-companydesc">Responsibilities</div>
                         <div class="proj-desc">
@@ -520,12 +601,15 @@
 
 
                     <div>
-                        <div class="exp-title">PMM Plus iOS app</div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">PMM Plus iOS app</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">Team size: 1</div>
+                        </div>
                         <div class="exp-company">PMM Plus: Your go-to news app for curated and up-to-date information.
                             Stay informed effortlessly.
                         </div>
                         <div class="exp-companydesc">
-                            Team size: 1
                         </div>
                         <div class="exp-companydesc">Responsibilities</div>
                         <div class="proj-desc">
@@ -543,12 +627,15 @@
 
 
                     <div>
-                        <div class="exp-title">Trishan android app</div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Trishan android app</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">Team size: 1</div>
+                        </div>
                         <div class="exp-company">Scan, record, and manage steel factory sheet processing and items,
                             including
                             calculations for seamless efficiency.</div>
                         <div class="exp-companydesc">
-                            Team size: 1
                         </div>
                         <div class="exp-companydesc">Responsibilities</div>
                         <div class="proj-desc">
@@ -564,10 +651,13 @@
 
 
                     <div>
-                        <div class="exp-title">Restaurant menu app for iOS and Android</div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Restaurant menu app for iOS and Android</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">Team size: 1</div>
+                        </div>
                         <div class="exp-company">Genral menu app for restaurants.</div>
                         <div class="exp-companydesc">
-                            Team size: 1
                         </div>
                         <div class="exp-companydesc">Responsibilities</div>
                         <div class="proj-desc">
@@ -584,11 +674,14 @@
 
 
                     <div>
-                        <div class="exp-title">Atletico de kolkata - football app for iOS and Android</div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Atletico de kolkata - football app for iOS and Android</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">Team size: 2</div>
+                        </div>
                         <div class="exp-company">Offers live game updates, team information, and hassle-free ticket
                             booking for an enhanced fan experience.</div>
                         <div class="exp-companydesc">
-                            Team size: 2
                         </div>
                         <div class="exp-companydesc">Responsibilities</div>
                         <div class="proj-desc">
@@ -606,11 +699,14 @@
 
 
                     <div>
-                        <div class="exp-title">eWards - loyalty program app for iOS and Android</div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">eWards - loyalty program app for iOS and Android</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">Team size: 2</div>
+                        </div>
                         <div class="exp-company">Simplifying loyalty programs with an app that allows users to earn,
                             track, and redeem rewards seamlessly.</div>
                         <div class="exp-companydesc">
-                            Team size: 2
                         </div>
                         <div class="exp-companydesc">Responsibilities</div>
                         <div class="proj-desc">
@@ -628,25 +724,351 @@
                 </div>
                 <!-- END PROJECTS -->
 
-                <div class="skills">
-                    <div class="section_title_main" style="color: #fff;">Skills</div>
-                    <ul class="skills-list">
-                        <li class="skill_item">Web Development</li>
-                        <li class="skill_item">Responsive Design</li>
-                        <li class="skill_item">UI/UX Design</li>
-                        <li class="skill_item">Agile Development</li>
-                        <li class="skill_item">Problem Solving</li>
-                    </ul>
+
+                <!-- PERSONAL-PROJECTS -->
+                <div class="space-y-8">
+
+                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                        <div class="text-2xl text-slate-600 mt-8 sec-header-child">Personal Projects
+                            <p class="h-0.5 w-[250px] bg-gray-500 my-2 mb-6" />
+                        </div>
+                    </div>
+
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Solve me free for android</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration"></div>
+                        </div>
+                        <div class="exp-company">Innovative word finding game. Based on native android kotlin without
+                            any game engine. <br /><a class="link"
+                                href="https://play.google.com/store/apps/details?id=com.chanonly123.wordpuzzle">
+                                Play store link</a></div>
+
+                    </div>
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Air hockey 2D for android</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration"></div>
+                        </div>
+                        <div class="exp-company">Airhockey 2d game. Based on canvas drawing and without any game engine.
+                            <br /><a class="link"
+                                href="https://github.com/chanonly123/Air-Hockey-2d-Android/blob/main/app-debug.apk?raw=true">
+                                Play store link</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- END PERSONAL-PROJECTS -->
+
+
+
+                <!-- EDUCATION -->
+
+                <div class="space-y-8">
+
+                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                        <div class="text-2xl text-slate-600 mt-8 sec-header-child">Blogs
+                            <p class="h-0.5 w-[80px] bg-gray-500 my-2 mb-6" />
+                        </div>
+                    </div>
+
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title"><a class="link"
+                                    href="https://medium.com/@chan.only.123/quick-swiftui-previews-exploring-leaf-ui-modules-with-spm-fda1cc0bcf0f">Turbocharged
+                                    SwiftUI Previews: Exploring Modularization with SPM</a></div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">December 2023</div>
+                        </div>
+                        <div class="exp-company">
+                            A Step-by-Step Guide to Building Modular Projects with Clean Architecture for Faster SwiftUI
+                            previews and development.
+                        </div>
+                    </div>
+
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title"><a class="link"
+                                    href="https://medium.com/@chan.only.123/create-a-simple-2d-air-hockey-game-in-ios-using-uikit-dynamics-part-1-202ee3da60f7">Create
+                                    a 2D air hockey game in iOS using UIKit Dynamics part 1</a></div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">September 2023</div>
+                        </div>
+                        <div class="exp-company">
+                            Crafting a Simple 2D Game with UIKit Dynamics: A Step-by-Step Tutorial.
+                        </div>
+                    </div>
+
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title"><a class="link"
+                                    href="https://medium.com/@chan.only.123/wrapping-up-boilerplate-code-part-1-interface-builder-f6180fd06feb">Wrapping
+                                    up boilerplate code — part 1: Interface builder</a></div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">February 2020</div>
+                        </div>
+                        <div class="exp-company">
+                            Tips to Trim Boilerplate Code in UIKit Development.
+                        </div>
+                    </div>
+
+
                 </div>
 
-                <div class="education">
-                    <div class="section_title_main">Education</div>
-                    <div class="education-item">
-                        <div class="education-title">Bachelor of Science in Computer Science</div>
-                        <div class="education-date">Graduated: May 2018</div>
-                        <p>University of Example, City, State</p>
+                <!-- END EDUCATION -->
+
+
+
+                <!-- OPEN-PROJECTS -->
+                <div class="space-y-8">
+
+                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                        <div class="text-2xl text-slate-600 mt-8 sec-header-child">Open-source Projects
+                            <p class="h-0.5 w-[170px] bg-gray-500 my-2 mb-6" />
+                        </div>
                     </div>
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title"><a class="link"
+                                    href="https://github.com/chanonly123/Json-Model-Generator">Json Model Generator</a>
+                            </div>
+                            <div class="grow"></div>
+                            <div class="exp-duration"></div>
+                        </div>
+                        <div class="exp-company">Macos application for Generating POJO classes, written in Swift.</div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title"><a class="link"
+                                    href="https://github.com/chanonly123/ProfileClusterView">Profile Cluster View</a>
+                            </div>
+                            <div class="grow"></div>
+                            <div class="exp-duration"></div>
+                        </div>
+                        <div class="exp-company">Fully automatic managed circular image array on UIKit, written in
+                            Swift.</div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title"><a class="link"
+                                    href="https://github.com/chanonly123/AutoKeyboard">Auto Keyboard</a>
+                            </div>
+                            <div class="grow"></div>
+                            <div class="exp-duration"></div>
+                        </div>
+                        <div class="exp-company">Automatic Keyboard handling library for iOS written in Swift, written
+                            in
+                            Swift.</div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title"><a class="link"
+                                    href="https://github.com/chanonly123/app-store-transition">App store transition
+                                    remake</a>
+                            </div>
+                            <div class="grow"></div>
+                            <div class="exp-duration"></div>
+                        </div>
+                        <div class="exp-company">iOS app store custom transition remake library.</div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title"><a class="link"
+                                    href="https://github.com/chanonly123/Gems-clasic-game">Gems clasic for iOS</a>
+                            </div>
+                            <div class="grow"></div>
+                            <div class="exp-duration"></div>
+                        </div>
+                        <div class="exp-company">Classic Gems matching game using swift and UIKit, minimal code.</div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title"><a class="link"
+                                    href="https://github.com/chanonly123/air_hockey_ios">Air hockey 2D for ios</a>
+                            </div>
+                            <div class="grow"></div>
+                            <div class="exp-duration"></div>
+                        </div>
+                        <div class="exp-company">Example of 2D air hockey 2 player game with UIView physics, written
+                            in
+                            Swift.</div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title"><a class="link"
+                                    href="https://github.com/chanonly123/BackgroundAnimation">Background Animation</a>
+                            </div>
+                            <div class="grow"></div>
+                            <div class="exp-duration"></div>
+                        </div>
+                        <div class="exp-company">Background animation of floating obects like HQ Trivia app, written
+                            in
+                            Swift.</div>
+                    </div>
+
                 </div>
+                <!-- END OPEN-PROJECTS -->
+
+
+                <!-- EDUCATION -->
+
+                <div class="space-y-8">
+
+                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                        <div class="text-2xl text-slate-600 mt-8 sec-header-child">Education
+                            <p class="h-0.5 w-[130px] bg-gray-500 my-2 mb-6" />
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">MCA (Master of Computer Application)</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">2012 - 2015</div>
+                        </div>
+                        <div class="exp-company">
+                            Under WBUT(West Bengal University of Technology)
+                            <br /><span class="font-bold">8.26</span> DGPA <span class="font-bold">7.51</span> CGPA
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">B. Sc. Computer Science (Honours)</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">2008 - 2011</div>
+                        </div>
+                        <div class="exp-company">
+                            Under CU (Calcutta University)
+                            <br />Overall <span class="font-bold">60%</span> score
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex items-baseline">
+                            <div class="exp-title">Higher Secondary (Class XII)</div>
+                            <div class="grow"></div>
+                            <div class="exp-duration">2008 - 2011</div>
+                        </div>
+                        <div class="exp-company">
+                            Sahapur Harendranath Vidyapith, Kolkata, West Bengal
+                            <br />Overall <span class="font-bold">60%</span> score
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <!-- END EDUCATION -->
+
+                <!-- HOBBIES -->
+                <div>
+
+                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                        <div class="text-2xl text-slate-600 mt-8 sec-header-child">Hobbies
+                            <p class="h-0.5 w-[110px] bg-gray-500 my-2 mb-6" />
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                        <div class="hobbie-item">Exploring swift</div>
+                        <div class="hobbie-item">Spending family time</div>
+                        <div class="hobbie-item">Playing pc games</div>
+                        <div class="hobbie-item">Watching movies</div>
+                        <div class="hobbie-item">Learning new tech</div>
+                        <div class="hobbie-item">Making games</div>
+                        <div class="hobbie-item">Writing tutorial blogs</div>
+                    </div>
+
+                </div>
+                <!-- END HOBBIES -->
+
+
+                <!-- LANGUAGES -->
+                <div>
+
+                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                        <div class="text-2xl text-slate-600 mt-8 sec-header-child">Speaking language
+                            <p class="h-0.5 w-[220px] bg-gray-500 my-2 mb-6" />
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center text-white text-xs font-bold">
+                        <div class="space-y-2">
+                            <p class="font-bold text-slate-700">English</p>
+                            <div class="bg-gray-200 w-40 rounded-full">
+                                <div class="bg-green-500 px-2 py-1 rounded-full w-[95%]">Reading</div>
+                            </div>
+                            <div class="bg-gray-200 w-40 rounded-full">
+                                <div class="bg-green-500 px-2 py-1 rounded-full w-[95%]">Writing</div>
+                            </div>
+                            <div class="bg-gray-200 w-40 rounded-full">
+                                <div class="bg-green-500 px-2 py-1 rounded-full w-[95%]">Speaking</div>
+                            </div>
+                        </div>
+
+
+                        <div class="space-y-2">
+                            <p class="font-bold text-slate-700">Hindi</p>
+                            <div class="bg-gray-200 w-40 rounded-full">
+                                <div class="bg-orange-500 px-2 py-1 rounded-full w-[60%]">Reading</div>
+                            </div>
+                            <div class="bg-gray-200 w-40 rounded-full">
+                                <div class="bg-orange-500 px-2 py-1 rounded-full w-[40%]">Writing</div>
+                            </div>
+                            <div class="bg-gray-200 w-40 rounded-full">
+                                <div class="bg-green-500 px-2 py-1 rounded-full w-[95%]">Speaking</div>
+                            </div>
+                        </div>
+
+
+                        <div class="space-y-2">
+                            <p class="font-bold text-slate-700">Bengali</p>
+                            <div class="bg-gray-200 w-40 rounded-full">
+                                <div class="bg-green-500 px-2 py-1 rounded-full w-[99%]">Reading</div>
+                            </div>
+                            <div class="bg-gray-200 w-40 rounded-full">
+                                <div class="bg-green-500 px-2 py-1 rounded-full w-[99%]">Writing</div>
+                            </div>
+                            <div class="bg-gray-200 w-40 rounded-full">
+                                <div class="bg-green-500 px-2 py-1 rounded-full w-[99%]">Speaking</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <!-- END LANGUAGES -->
 
             </div>
 
