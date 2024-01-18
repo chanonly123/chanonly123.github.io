@@ -57,8 +57,19 @@
         .main-cont {
             @apply md:w-3/5 lg:w-3/5 mb-16;
         }
-      </style>
+    </style>
 
+    <script>
+        function showUpdateButton() {
+            document.getElementById('btn_update').style.display = 'block'
+        }
+        window.addEventListener('load', function () {
+            console.log(`showUpdateButton()`)
+            if (window.location.origin === 'https://chanonly123.github.io') {
+                document.getElementById('btn_update').style.display = 'none'
+            }
+        });
+    </script>
 </head>
 
 <body class="font-sans antialiased">
@@ -69,7 +80,7 @@
         <div class="sidebar rounded-br-[80px]">
 
 
-            <a href="https://chanonly123.github.io/resume" target="_blank" class="hover:text-white">
+            <a id="btn_update" href="https://chanonly123.github.io/resume" target="_blank">
                 <button class="flex m-[-12px] gap-1 font-bold text-base hover-anim3 mb-4 items-center">
                     <img class="size-[20px]" src="res/info-circle-svgrepo-com.svg" />
                     Updated version here
