@@ -43,13 +43,13 @@
             @apply rounded-lg bg-teal-600 px-[5px] py-[1.5px] font-bold text-xs text-white;
         }
         .hover-anim1 {
-            @apply transition ease-in-out delay-0 hover:scale-[1.02] duration-200 hover:shadow-xl p-[25px] mx-[-20px] rounded-lg;
+            @apply transition ease-in-out delay-0 hover:scale-[1.02] duration-200 hover:shadow-xl p-[25px] mx-[-20px] rounded-lg hover:border-solid hover:border-slate-100 border-transparent border-[1px];
         }
         .hover-anim2 {
             @apply transition ease-in-out delay-0 hover:scale-[1.04] duration-200 p-[2px] mx-[-2px] rounded-lg;
         }
         .hover-anim3 {
-            @apply transition ease-in-out delay-0 hover:scale-[1.2] duration-200;
+            @apply transition ease-in-out delay-0 hover:scale-[1.1] duration-200;
         }
         .sidebar {
             @apply lg:w-80 md:w-80 lg:h-screen md:h-screen bg-[#155e75] text-white p-8 lg:sticky lg:top-0 md:sticky md:top-0;
@@ -66,22 +66,20 @@
     <div class="md:flex place-content-center text-sm">
 
         <!-- SIDEBAR -->
-        <div class="sidebar">
+        <div class="sidebar rounded-br-[80px]">
 
-            <button class="absolute size-8 sticky top-0 m-[-12px] hover-anim3" onclick="triggerPrint()">
-                <img src="res/download-offline-svgrepo-com.svg" />
-                <script>
-                    function triggerPrint() {
-                        // Trigger the browser's print functionality
-                        window.print();
-                    }
-                </script>
-            </button>
+
+            <a href="https://chanonly123.github.io/resume" target="_blank" class="hover:text-white">
+                <button class="flex m-[-12px] gap-1 font-bold text-base hover-anim3 mb-4 items-center">
+                    <img class="size-[20px]" src="res/info-circle-svgrepo-com.svg" />
+                    Updated version here
+                </button>
+            </a>
 
             <div class="px-12">
                 <img class="rounded-full center border-8 border-white-600" src="res/photo1.jpg" alt="Profile Picture">
             </div>
-            <div class="space-y-2 mt-8">
+            <div class="space-y-2 mt-6">
                 <div class="text-xl">Contact</div>
                 <p class="h-0.5 w-20 bg-white my-2 mb-6" />
 
@@ -102,14 +100,16 @@
             </div>
 
             <div class="flex flex items-center space-y-2 mt-2 space-x-3">
-                <a class="size-[35px] mt-[8px] hover-anim3" href="https://github.com/chanonly123" target="_blank">
+                <a class="animate-bounce size-[35px] mt-[8px] hover-anim3" href="https://github.com/chanonly123"
+                    target="_blank">
                     <img src="res/github-svgrepo-com.svg" />
                 </a>
                 <a class="size-[40px] hover-anim3" href="https://stackoverflow.com/users/4568747/chanonly123"
                     target="_blank">
                     <img src="res/stackoverflow-circle-svgrepo-com.svg" />
                 </a>
-                <a class="size-[35px] hover-anim3" href="https://www.linkedin.com/in/chanonly123" target="_blank">
+                <a class="animate-bounce size-[35px] hover-anim3" href="https://www.linkedin.com/in/chanonly123"
+                    target="_blank">
                     <img src="res/linkedin-round-svgrepo-com.svg" />
                 </a>
                 <a class="size-[35px] hover-anim3" href="https://www.facebook.com/chandan.karmakar.980967"
@@ -121,7 +121,7 @@
 
 
             <div>
-                <div class="text-xl mt-8">Primary Skills</div>
+                <div class="text-xl mt-6">Primary Skills</div>
                 <p class="h-0.5 w-32 bg-white my-2 mb-6" />
 
                 <div class="space-y-2 text-xs font-bold hover-anim2">
@@ -144,7 +144,7 @@
             </div>
 
             <div>
-                <div class="text-xl mt-8">Tools</div>
+                <div class="text-xl mt-6">Tools</div>
                 <p class="h-0.5 w-[60px] bg-white my-2 mb-6" />
 
                 <div class="flex flex-wrap gap-2 hover-anim2">
@@ -168,10 +168,9 @@
 
         <div class="main-cont">
 
-
             <!-- HEADER -->
             <div class="flex flex-col items-center py-20 bg-gray-100">
-                <h1 class="text-3xl text-slate-700">CHANDAN KARMAKAR</h1>
+                <h1 class="animate-pulse text-3xl text-slate-700">CHANDAN KARMAKAR</h1>
                 <p class="h-0.5 w-28 bg-gray-500 my-4 mb-6" />
                 <p class="text-2xl">iOS app developer</p>
             </div>
