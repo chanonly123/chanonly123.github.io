@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="refresh" content="3"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <style type="text/tailwindcss">
         .exp-title {
             @apply font-semibold text-lg;
@@ -49,6 +49,9 @@
         .hover-anim2 {
             @apply transition ease-in-out delay-0 hover:scale-[1.04] duration-200 p-[2px] mx-[-2px] rounded-lg;
         }
+        .hover-anim3 {
+            @apply transition ease-in-out delay-0 hover:scale-[1.2] duration-200;
+        }
         .sidebar {
             @apply lg:w-80 md:w-80 lg:h-screen md:h-screen bg-[#155e75] text-white p-8 lg:sticky lg:top-0 md:sticky md:top-0;
         }
@@ -56,15 +59,59 @@
             @apply md:w-3/5 lg:w-3/5 mb-16;
         }
       </style>
+
 </head>
 
 <body class="font-sans antialiased">
 
     <div class="md:flex place-content-center text-sm">
 
-
         <!-- SIDEBAR -->
         <div class="sidebar">
+
+            <button class="absolute size-8 sticky top-0 m-[-12px] hover-anim3" onclick="downloadAsPDF()">
+                <img src="res/download-offline-svgrepo-com.svg" />
+                <script>
+                    function triggerPrint() {
+                        // Trigger the browser's print functionality
+                        window.print();
+                    }
+                </script>
+
+                <script>
+                    async function downloadAsPDF() {
+                        // Get the HTML content to be converted to PDF
+                        const element = document.body;
+
+                        // Options for the PDF generation
+                        const pdfOptions = {
+                            margin: 10,
+                            filename: 'downloaded-page.pdf',
+                            image: { type: 'jpeg', quality: 0.98 },
+                            html2canvas: { scale: 2 },
+                            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                        };
+
+                        try {
+                            // Use html2pdf library to generate the PDF
+                            const pdf = await html2pdf().from(element).set(pdfOptions).outputPdf();
+
+                            // Create a Blob from the PDF data
+                            const blob = new Blob([pdf], { type: 'application/pdf' });
+
+                            // Create a download link and trigger a click event
+                            const link = document.createElement('a');
+                            link.href = URL.createObjectURL(blob);
+                            link.download = pdfOptions.filename;
+                            link.click();
+
+                        } catch (error) {
+                            console.error('Error generating PDF:', error);
+                        }
+                    }
+                </script>
+            </button>
+
             <div class="px-12">
                 <img class="rounded-full center border-8 border-white-600" src="res/photo1.jpg" alt="Profile Picture">
             </div>
@@ -86,6 +133,23 @@
                     <image class="mr-1 fill-black size-6" src="res/phone-rounded-svgrepo-com.svg" />
                     <div>(+91) 7059533294</div>
                 </div>
+            </div>
+
+            <div class="flex flex items-center space-y-2 mt-2 space-x-3">
+                <a class="size-[35px] mt-[8px] hover-anim3" href="https://github.com/chanonly123" target="_blank">
+                    <img src="res/github-svgrepo-com.svg" />
+                </a>
+                <a class="size-[40px] hover-anim3" href="https://stackoverflow.com/users/4568747/chanonly123"
+                    target="_blank">
+                    <img src="res/stackoverflow-circle-svgrepo-com.svg" />
+                </a>
+                <a class="size-[35px] hover-anim3" href="https://www.linkedin.com/in/chanonly123" target="_blank">
+                    <img src="res/linkedin-round-svgrepo-com.svg" />
+                </a>
+                <a class="size-[35px] hover-anim3" href="https://www.facebook.com/chandan.karmakar.980967"
+                    target="_blank">
+                    <img src="res/facebook-svgrepo-com.svg" />
+                </a>
             </div>
 
 
@@ -137,6 +201,7 @@
         <!-- END SIDEBAR -->
 
         <div class="main-cont">
+
 
             <!-- HEADER -->
             <div class="flex flex-col items-center py-20 bg-gray-100">
