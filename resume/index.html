@@ -32,16 +32,28 @@
             @apply text-blue-600 font-bold hover:underline;
         }
         .sec-header-cont {
-            @apply mx-[-60px];
+            @apply mx-[-60px] sticky top-0 backdrop-blur-xl;
         }
         .sec-header-child {
             @apply mx-[60px];
         }
         .hobbie-item {
-            @apply rounded-lg bg-slate-200 px-2 py-1 font-medium;
+            @apply rounded-lg bg-slate-200 px-2 py-1 font-medium hover:shadow-lg hover:bg-blue-500/50 hover:text-white;
         }
         .tool-item {
             @apply rounded-lg bg-teal-600 px-[5px] py-[1.5px] font-bold text-xs text-white;
+        }
+        .hover-anim1 {
+            @apply transition ease-in-out delay-0 hover:scale-[1.02] duration-200 hover:shadow-2xl p-[25px] mx-[-20px] rounded-lg;
+        }
+        .hover-anim2 {
+            @apply transition ease-in-out delay-0 hover:scale-[1.04] duration-200 p-[2px] mx-[-2px] rounded-lg;
+        }
+        .sidebar {
+            @apply lg:w-80 md:w-80 lg:h-screen md:h-screen bg-[#155e75] text-white p-8 lg:sticky lg:top-0 md:sticky md:top-0;
+        }
+        .main-cont {
+            @apply md:w-3/5 lg:w-3/5 mb-16;
         }
       </style>
 </head>
@@ -52,7 +64,7 @@
 
 
         <!-- SIDEBAR -->
-        <div class="w-80 bg-[#155e75] text-white p-8 sticky top-0 h-screen">
+        <div class="sidebar">
             <div class="px-12">
                 <img class="rounded-full center border-8 border-white-600" src="res/photo1.jpg" alt="Profile Picture">
             </div>
@@ -60,17 +72,17 @@
                 <div class="text-xl">Contact</div>
                 <p class="h-0.5 w-20 bg-white my-2 mb-6" />
 
-                <div class="md:flex pt-2">
-                    <image class="mr-1 fill-black size-5" src="res/pin-fill-rounded-circle-629-svgrepo-com.svg" />
+                <div class="flex pt-2">
+                    <image class="mr-2 fill-black size-5" src="res/pin-fill-rounded-circle-629-svgrepo-com.svg" />
                     <div>Bengaluru, Karnataka, India</div>
                 </div>
 
-                <div class="md:flex">
-                    <image class="mr-1 fill-black size-5" src="res/email-svgrepo-com.svg" />
+                <div class="flex">
+                    <image class="mr-2 fill-black size-5" src="res/email-svgrepo-com.svg" />
                     <div>chan.only.123@gmail.com</div>
                 </div>
 
-                <div class="md:flex">
+                <div class="flex">
                     <image class="mr-1 fill-black size-6" src="res/phone-rounded-svgrepo-com.svg" />
                     <div>(+91) 7059533294</div>
                 </div>
@@ -82,7 +94,7 @@
                 <div class="text-xl mt-8">Primary Skills</div>
                 <p class="h-0.5 w-32 bg-white my-2 mb-6" />
 
-                <div class="space-y-2 text-xs font-bold">
+                <div class="space-y-2 text-xs font-bold hover-anim2">
                     <div class="bg-gray-200 w-40 rounded-full">
                         <div class="bg-emerald-500 px-2 py-[1px] rounded-full w-[95%]">iOS</div>
                     </div>
@@ -105,7 +117,7 @@
                 <div class="text-xl mt-8">Tools</div>
                 <p class="h-0.5 w-[60px] bg-white my-2 mb-6" />
 
-                <div class="flex flex-wrap gap-2">
+                <div class="flex flex-wrap gap-2 hover-anim2">
                     <div class="tool-item">Xcode</div>
                     <div class="tool-item">SwiftUI</div>
                     <div class="tool-item">UIKit</div>
@@ -124,7 +136,7 @@
 
         <!-- END SIDEBAR -->
 
-        <div class="w-[800px] mb-16">
+        <div class="main-cont">
 
             <!-- HEADER -->
             <div class="flex flex-col items-center py-20 bg-gray-100">
@@ -138,7 +150,7 @@
             <div class="sec-header-child mt-16">
 
                 <div class="profile_summary">
-                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                    <div class="sec-header-cont">
                         <div class="text-2xl text-slate-600 sec-header-child">
                             Summary
                             <p class="h-0.5 w-[120px] bg-gray-500 my-2 mb-6" />
@@ -154,9 +166,9 @@
 
 
                 <!-- WROK EXPERIENCES -->
-                <div class="space-y-8">
+                <div>
 
-                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                    <div class="sec-header-cont">
                         <div class="text-2xl text-slate-600 mt-8 sec-header-child">Work Experience
                             <p class="h-0.5 w-[200px] bg-gray-500 my-2 mb-6" />
                         </div>
@@ -164,7 +176,7 @@
 
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Senior iOS developer</div>
                             <div class="grow"></div>
@@ -194,7 +206,7 @@
 
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Lead iOS/Android developer</div>
                             <div class="grow"></div>
@@ -231,7 +243,7 @@
 
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Lead iOS developer</div>
                             <div class="grow"></div>
@@ -281,7 +293,7 @@
 
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Lead iOS developer</div>
                             <div class="grow"></div>
@@ -318,7 +330,7 @@
                     </div>
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Android and iOS developer</div>
                             <div class="grow"></div>
@@ -371,7 +383,7 @@
                     </div>
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Computer science teacher</div>
                             <div class="grow"></div>
@@ -396,15 +408,15 @@
 
 
                 <!-- PROJECTS -->
-                <div class="space-y-8">
+                <div>
 
-                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                    <div class="sec-header-cont">
                         <div class="text-2xl text-slate-600 mt-8 sec-header-child">Projects
                             <p class="h-0.5 w-[110px] bg-gray-500 my-2 mb-6" />
                         </div>
                     </div>
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Bolt earth iOS sdk</div>
                             <div class="grow"></div>
@@ -439,7 +451,7 @@
 
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Eezy: Your mood driven partner</div>
                             <div class="grow"></div>
@@ -472,7 +484,7 @@
 
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Whatstool business</div>
                             <div class="grow"></div>
@@ -500,7 +512,7 @@
 
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Buddytalk</div>
                             <div class="grow"></div>
@@ -527,7 +539,7 @@
 
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Opentalk</div>
                             <div class="grow"></div>
@@ -554,7 +566,7 @@
 
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Stupid App - Trivia Game</div>
                             <div class="grow"></div>
@@ -580,7 +592,7 @@
 
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Moove iOS app</div>
                             <div class="grow"></div>
@@ -605,7 +617,7 @@
                     </div>
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">PMM Plus iOS app</div>
                             <div class="grow"></div>
@@ -631,7 +643,7 @@
 
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Trishan android app</div>
                             <div class="grow"></div>
@@ -655,7 +667,7 @@
 
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Restaurant menu app for iOS and Android</div>
                             <div class="grow"></div>
@@ -678,7 +690,7 @@
                     </div>
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Atletico de kolkata - football app for iOS and Android</div>
                             <div class="grow"></div>
@@ -703,7 +715,7 @@
 
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">eWards - loyalty program app for iOS and Android</div>
                             <div class="grow"></div>
@@ -731,17 +743,17 @@
 
 
                 <!-- PERSONAL-PROJECTS -->
-                <div class="space-y-8">
+                <div>
 
-                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                    <div class="sec-header-cont">
                         <div class="text-2xl text-slate-600 mt-8 sec-header-child">Personal Projects
-                            <p class="h-0.5 w-[250px] bg-gray-500 my-2 mb-6" />
+                            <p class="h-0.5 w-[200px] bg-gray-500 my-2 mb-6" />
                         </div>
                     </div>
 
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Solve me free for android</div>
                             <div class="grow"></div>
@@ -755,7 +767,7 @@
                     </div>
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Air hockey 2D for android</div>
                             <div class="grow"></div>
@@ -776,9 +788,9 @@
 
                 <!-- EDUCATION -->
 
-                <div class="space-y-8">
+                <div>
 
-                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                    <div class="sec-header-cont">
                         <div class="text-2xl text-slate-600 mt-8 sec-header-child">Blogs
                             <p class="h-0.5 w-[80px] bg-gray-500 my-2 mb-6" />
                         </div>
@@ -786,7 +798,7 @@
 
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title"><a target="_blank" class="link"
                                     href="https://medium.com/@chan.only.123/quick-swiftui-previews-exploring-leaf-ui-modules-with-spm-fda1cc0bcf0f">Turbocharged
@@ -802,7 +814,7 @@
 
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title"><a target="_blank" class="link"
                                     href="https://medium.com/@chan.only.123/create-a-simple-2d-air-hockey-game-in-ios-using-uikit-dynamics-part-1-202ee3da60f7">Create
@@ -817,7 +829,7 @@
 
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title"><a target="_blank" class="link"
                                     href="https://medium.com/@chan.only.123/wrapping-up-boilerplate-code-part-1-interface-builder-f6180fd06feb">Wrapping
@@ -838,16 +850,16 @@
 
 
                 <!-- OPEN-PROJECTS -->
-                <div class="space-y-8">
+                <div>
 
-                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                    <div class="sec-header-cont">
                         <div class="text-2xl text-slate-600 mt-8 sec-header-child">Open-source Projects
-                            <p class="h-0.5 w-[170px] bg-gray-500 my-2 mb-6" />
+                            <p class="h-0.5 w-[250px] bg-gray-500 my-2 mb-6" />
                         </div>
                     </div>
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title"><a target="_blank" class="link"
                                     href="https://github.com/chanonly123/Json-Model-Generator">Json Model Generator</a>
@@ -859,7 +871,7 @@
                     </div>
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title"><a target="_blank" class="link"
                                     href="https://github.com/chanonly123/ProfileClusterView">Profile Cluster View</a>
@@ -872,7 +884,7 @@
                     </div>
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title"><a target="_blank" class="link"
                                     href="https://github.com/chanonly123/AutoKeyboard">Auto Keyboard</a>
@@ -885,7 +897,7 @@
                             Swift.</div>
                     </div>
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title"><a target="_blank" class="link"
                                     href="https://github.com/chanonly123/app-store-transition">App store transition
@@ -898,7 +910,7 @@
                     </div>
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title"><a target="_blank" class="link"
                                     href="https://github.com/chanonly123/Gems-clasic-game">Gems clasic for iOS</a>
@@ -909,7 +921,7 @@
                         <div class="exp-company">Classic Gems matching game using swift and UIKit, minimal code.</div>
                     </div>
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title"><a target="_blank" class="link"
                                     href="https://github.com/chanonly123/air_hockey_ios">Air hockey 2D for ios</a>
@@ -923,7 +935,7 @@
                     </div>
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title"><a target="_blank" class="link"
                                     href="https://github.com/chanonly123/BackgroundAnimation">Background Animation</a>
@@ -944,14 +956,14 @@
 
                 <div class="space-y-8">
 
-                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                    <div class="sec-header-cont">
                         <div class="text-2xl text-slate-600 mt-8 sec-header-child">Education
                             <p class="h-0.5 w-[130px] bg-gray-500 my-2 mb-6" />
                         </div>
                     </div>
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">MCA (Master of Computer Application)</div>
                             <div class="grow"></div>
@@ -964,7 +976,7 @@
                     </div>
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">B. Sc. Computer Science (Honours)</div>
                             <div class="grow"></div>
@@ -977,7 +989,7 @@
                     </div>
 
 
-                    <div>
+                    <div class="hover-anim1">
                         <div class="flex items-baseline">
                             <div class="exp-title">Higher Secondary (Class XII)</div>
                             <div class="grow"></div>
@@ -998,13 +1010,13 @@
                 <!-- HOBBIES -->
                 <div>
 
-                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                    <div class="sec-header-cont">
                         <div class="text-2xl text-slate-600 mt-8 sec-header-child">Hobbies
                             <p class="h-0.5 w-[110px] bg-gray-500 my-2 mb-6" />
                         </div>
                     </div>
 
-                    <div class="flex flex-wrap gap-2">
+                    <div class="hover-anim1 flex flex-wrap gap-2">
                         <div class="hobbie-item">Exploring swift</div>
                         <div class="hobbie-item">Spending family time</div>
                         <div class="hobbie-item">Playing pc games</div>
@@ -1021,14 +1033,14 @@
                 <!-- LANGUAGES -->
                 <div>
 
-                    <div class="sticky top-0 backdrop-blur-xl sec-header-cont">
+                    <div class="sec-header-cont">
                         <div class="text-2xl text-slate-600 mt-8 sec-header-child">Speaking language
                             <p class="h-0.5 w-[220px] bg-gray-500 my-2 mb-6" />
                         </div>
                     </div>
 
                     <div class="flex justify-between items-center text-white text-xs font-bold">
-                        <div class="space-y-2">
+                        <div class="space-y-2 hover-anim2">
                             <p class="font-bold text-slate-700">English</p>
                             <div class="bg-gray-200 w-40 rounded-full">
                                 <div class="bg-green-500 px-2 py-1 rounded-full w-[95%]">Reading</div>
@@ -1042,7 +1054,7 @@
                         </div>
 
 
-                        <div class="space-y-2">
+                        <div class="space-y-2 hover-anim2">
                             <p class="font-bold text-slate-700">Hindi</p>
                             <div class="bg-gray-200 w-40 rounded-full">
                                 <div class="bg-orange-500 px-2 py-1 rounded-full w-[60%]">Reading</div>
@@ -1056,7 +1068,7 @@
                         </div>
 
 
-                        <div class="space-y-2">
+                        <div class="space-y-2 hover-anim2">
                             <p class="font-bold text-slate-700">Bengali</p>
                             <div class="bg-gray-200 w-40 rounded-full">
                                 <div class="bg-green-500 px-2 py-1 rounded-full w-[99%]">Reading</div>
@@ -1075,9 +1087,20 @@
                 </div>
                 <!-- END LANGUAGES -->
 
+
+                <!-- FINAL -->
+                <div class="flex flex-col items-center my-32">
+
+                    <div class="md:flex  items-center">
+                        <img class="w-5 mx-2 my-3" src="res/tailwind-svgrepo-com.svg" />By Tailwind CSS
+                    </div>
+
+                </div>
             </div>
 
         </div>
+
+
     </div>
 
 </body>
