@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <style type="text/tailwindcss">
         .exp-title {
             @apply font-semibold text-lg;
@@ -44,7 +43,7 @@
             @apply rounded-lg bg-teal-600 px-[5px] py-[1.5px] font-bold text-xs text-white;
         }
         .hover-anim1 {
-            @apply transition ease-in-out delay-0 hover:scale-[1.02] duration-200 hover:shadow-2xl p-[25px] mx-[-20px] rounded-lg;
+            @apply transition ease-in-out delay-0 hover:scale-[1.02] duration-200 hover:shadow-xl p-[25px] mx-[-20px] rounded-lg;
         }
         .hover-anim2 {
             @apply transition ease-in-out delay-0 hover:scale-[1.04] duration-200 p-[2px] mx-[-2px] rounded-lg;
@@ -69,45 +68,12 @@
         <!-- SIDEBAR -->
         <div class="sidebar">
 
-            <button class="absolute size-8 sticky top-0 m-[-12px] hover-anim3" onclick="downloadAsPDF()">
+            <button class="absolute size-8 sticky top-0 m-[-12px] hover-anim3" onclick="triggerPrint()">
                 <img src="res/download-offline-svgrepo-com.svg" />
                 <script>
                     function triggerPrint() {
                         // Trigger the browser's print functionality
                         window.print();
-                    }
-                </script>
-
-                <script>
-                    async function downloadAsPDF() {
-                        // Get the HTML content to be converted to PDF
-                        const element = document.body;
-
-                        // Options for the PDF generation
-                        const pdfOptions = {
-                            margin: 10,
-                            filename: 'downloaded-page.pdf',
-                            image: { type: 'jpeg', quality: 0.98 },
-                            html2canvas: { scale: 2 },
-                            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                        };
-
-                        try {
-                            // Use html2pdf library to generate the PDF
-                            const pdf = await html2pdf().from(element).set(pdfOptions).outputPdf();
-
-                            // Create a Blob from the PDF data
-                            const blob = new Blob([pdf], { type: 'application/pdf' });
-
-                            // Create a download link and trigger a click event
-                            const link = document.createElement('a');
-                            link.href = URL.createObjectURL(blob);
-                            link.download = pdfOptions.filename;
-                            link.click();
-
-                        } catch (error) {
-                            console.error('Error generating PDF:', error);
-                        }
                     }
                 </script>
             </button>
