@@ -74,7 +74,16 @@ function logActivity(name, data) {
     }
 }
 
+function showUpdateButton() {
+    document.getElementById('btn_update').style.display = 'block'
+}
+
 window.addEventListener('load', function () {
+    console.log(`showUpdateButton()`)
+    if (!isLocal) {
+        document.getElementById('btn_update').style.display = 'none'
+    }
+
     sendClientInformation().then();
 
     let scrollActivitySendTask = 0
@@ -90,3 +99,4 @@ window.addEventListener('load', function () {
         }, 1000)
     }, false);
 });
+
