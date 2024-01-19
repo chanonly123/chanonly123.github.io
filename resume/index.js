@@ -1,5 +1,6 @@
 
-window.log = window.location.origin.startsWith('file')
+var isLocal = window.location.origin.startsWith('file')
+window.log = isLocal
 
 function print(...args) {
     if (window.log) {
@@ -56,7 +57,7 @@ async function sendClientInformation() {
 }
 
 function logActivity(name, data) {
-    if (!window.location.origin.startsWith('file')) {
+    if (!isLocal) {
         let formData = new FormData();
         formData.append('entry.1958190792', name);
         formData.append('entry.1860107021', JSON.stringify(data));

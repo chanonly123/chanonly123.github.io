@@ -67,7 +67,7 @@
         }
         window.addEventListener('load', function () {
             console.log(`showUpdateButton()`)
-            if (window.location.origin === 'https://chanonly123.github.io') {
+            if (!isLocal) {
                 document.getElementById('btn_update').style.display = 'none'
             }
         });
