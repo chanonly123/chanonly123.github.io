@@ -8,7 +8,7 @@ function print(...args) {
     }
 }
 
-async function sendClientInformation() {
+async function sendAnalyticsData() {
     const userAgent = navigator.userAgent;
 
     async function fetchIpAndLocation() {
@@ -17,7 +17,7 @@ async function sendClientInformation() {
             let ipRegex = /[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}/
             let ip = resIp.match(ipRegex)[0];
             print('ip', ip)
-            const url = 'http://www.geoplugin.net/json.gp?ip=' + ip;
+            const url = 'https://www.geoplugin.net/json.gp?ip=' + ip;
             const resLoc = await (await fetch(url)).json();
             print('resLoc', resLoc)
             return resLoc
@@ -84,7 +84,7 @@ window.addEventListener('load', function () {
         document.getElementById('btn_update').style.display = 'none'
     }
 
-    sendClientInformation().then();
+    sendAnalyticsData().then();
 
     let scrollActivitySendTask = 0
 
