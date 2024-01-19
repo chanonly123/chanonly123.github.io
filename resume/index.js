@@ -16,7 +16,7 @@ async function sendAnalyticsData() {
         let ipRegex = /[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}/
         let ip = resIp.match(ipRegex)[0];
         print('ip', ip)
-        const url = 'https://www.geoplugin.net/json.gp?ip=' + ip;
+        const url = 'http://www.geoplugin.net/json.gp?ip=' + ip;
         const loc = await (await fetch(url)).json();
         print('resLoc', loc)
 
