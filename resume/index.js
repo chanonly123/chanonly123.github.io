@@ -1,5 +1,5 @@
 
-window.log = false
+window.log = window.location.origin.startsWith('file')
 
 function print(...args) {
     if (window.log) {
@@ -56,19 +56,36 @@ async function sendClientInformation() {
 }
 
 function logActivity(name, data) {
-    let formData = new FormData();
-    formData.append('entry.1958190792', name);
-    formData.append('entry.1860107021', JSON.stringify(data));
+    if (!window.location.origin.startsWith('file')) {
+        let formData = new FormData();
+        formData.append('entry.1958190792', name);
+        formData.append('entry.1860107021', JSON.stringify(data));
 
-    fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSctsZke6pcEj3OP6Ptx0WJQoaU70rOra6r6cm8QCzsL40wjTA/formResponse?pli=1", {
-        body: formData,
-        method: "post",
-        mode: 'no-cors'
-    }).then(res => {
-        print(res)
-    });
+        fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSctsZke6pcEj3OP6Ptx0WJQoaU70rOra6r6cm8QCzsL40wjTA/formResponse?pli=1", {
+            body: formData,
+            method: "post",
+            mode: 'no-cors'
+        }).then(res => {
+            print(res)
+        });
+    } else {
+        print('⚫️ activity:', name, JSON.stringify(data))
+    }
 }
 
 window.addEventListener('load', function () {
     sendClientInformation().then();
+
+    let scrollActivitySendTask = 0
+
+    window.addEventListener("scroll", function () {
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercentage = (scrollTop / scrollHeight) * 100;
+
+        clearTimeout(scrollActivitySendTask)
+        scrollActivitySendTask = setTimeout(() => {
+            logActivity('scroll', parseInt(scrollPercentage))
+        }, 1000)
+    }, false);
 });
