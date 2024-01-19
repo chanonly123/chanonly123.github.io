@@ -9,51 +9,47 @@ function print(...args) {
 }
 
 async function sendAnalyticsData() {
-    const userAgent = navigator.userAgent;
+    try {
+        const userAgent = navigator.userAgent;
 
-    async function fetchIpAndLocation() {
-        try {
-            const resIp = await (await fetch('https://www.cloudflare.com/cdn-cgi/trace')).text();
-            let ipRegex = /[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}/
-            let ip = resIp.match(ipRegex)[0];
-            print('ip', ip)
-            const url = 'https://www.geoplugin.net/json.gp?ip=' + ip;
-            const resLoc = await (await fetch(url)).json();
-            print('resLoc', resLoc)
-            return resLoc
-        } catch (error) {
-            console.error(error)
-        }
+        const resIp = await (await fetch('https://www.cloudflare.com/cdn-cgi/trace')).text();
+        let ipRegex = /[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}/
+        let ip = resIp.match(ipRegex)[0];
+        print('ip', ip)
+        const url = 'https://www.geoplugin.net/json.gp?ip=' + ip;
+        const loc = await (await fetch(url)).json();
+        print('resLoc', loc)
+
+        // Screen Resolution and Browser Window Size
+        const screenWidth = window.screen.width;
+        const screenHeight = window.screen.height;
+
+        const browserWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        const browserHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+        // Create an object containing the information
+        const clientInfo = {
+            userAgent: userAgent,
+            location: {
+                country: loc.geoplugin_countryName,
+                city: loc.geoplugin_city,
+                state: loc.geoplugin_region
+            },
+            screenResolution: {
+                screenWidth: screenWidth,
+                screenHeight: screenHeight
+            },
+            browserWindowSize: {
+                browserWidth: browserWidth,
+                browserHeight: browserHeight
+            }
+        };
+        print(clientInfo)
+        logActivity('view', clientInfo)
+    } catch (error) {
+        console.error(error)
+        logActivity('error', error)
     }
-
-    const loc = await fetchIpAndLocation()
-
-    // Screen Resolution and Browser Window Size
-    const screenWidth = window.screen.width;
-    const screenHeight = window.screen.height;
-
-    const browserWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    const browserHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-
-    // Create an object containing the information
-    const clientInfo = {
-        userAgent: userAgent,
-        location: {
-            country: loc.geoplugin_countryName,
-            city: loc.geoplugin_city,
-            state: loc.geoplugin_region
-        },
-        screenResolution: {
-            screenWidth: screenWidth,
-            screenHeight: screenHeight
-        },
-        browserWindowSize: {
-            browserWidth: browserWidth,
-            browserHeight: browserHeight
-        }
-    };
-    print(clientInfo)
-    logActivity('view', clientInfo)
 }
 
 function logActivity(name, data) {
@@ -68,6 +64,8 @@ function logActivity(name, data) {
             mode: 'no-cors'
         }).then(res => {
             print(res)
+        }).catch(error => {
+            logActivity('error', error)
         });
     } else {
         print('⚫️ activity:', name, JSON.stringify(data))
