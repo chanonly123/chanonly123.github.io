@@ -15,10 +15,10 @@ async function sendAnalyticsData() {
         const resIp = await (await fetch('https://www.cloudflare.com/cdn-cgi/trace')).text();
         let ipRegex = /[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}/
         let ip = resIp.match(ipRegex)[0];
-        print('ip', ip)
-        const url = 'http://www.geoplugin.net/json.gp?ip=' + ip;
-        const loc = await (await fetch(url)).json();
-        print('resLoc', loc)
+        // print('ip', ip)
+        // const url = 'http://www.geoplugin.net/json.gp?ip=' + ip;
+        // const loc = await (await fetch(url)).json();
+        // print('resLoc', loc)
 
         // Screen Resolution and Browser Window Size
         const screenWidth = window.screen.width;
@@ -30,11 +30,11 @@ async function sendAnalyticsData() {
         // Create an object containing the information
         const clientInfo = {
             userAgent: userAgent,
-            location: {
-                country: loc.geoplugin_countryName,
-                city: loc.geoplugin_city,
-                state: loc.geoplugin_region
-            },
+            // location: {
+            //     country: loc.geoplugin_countryName,
+            //     city: loc.geoplugin_city,
+            //     state: loc.geoplugin_region
+            // },
             screenResolution: {
                 screenWidth: screenWidth,
                 screenHeight: screenHeight
@@ -47,6 +47,7 @@ async function sendAnalyticsData() {
         print(clientInfo)
         logActivity('view', clientInfo)
     } catch (error) {
+        logActivity('view')
         console.error(error)
         logActivity('error', error)
     }
